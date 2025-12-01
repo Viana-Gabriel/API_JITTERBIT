@@ -76,13 +76,12 @@ CREATE TABLE items (
 Crie um arquivo `.env` na raiz e inclua:
 
 ```
-APP_PORT=3000
-
 DB_USER=postgres
-DB_HOST=localhost
-DB_DATABASE=ordersdb
 DB_PASSWORD=(sua senha)
+DB_HOST=localhost
+DB_NAME=ordersdb
 DB_PORT=5432
+APP_PORT=3000
 ```
 
 ---
