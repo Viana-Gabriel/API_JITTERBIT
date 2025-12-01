@@ -117,10 +117,10 @@ http://localhost:3000
 | Método | Rota               | Descrição                |
 |--------|--------------------|--------------------------|
 | `POST` | `/order`           | Cria um novo pedido      |
-| `GET`  | `/order/:id`       | Busca um pedido          |
+| `GET`  | `/order/:orderId`       | Busca um pedido          |
 | `GET`  | `/order/list`      | Lista todos os pedidos   |
-| `PUT`  | `/order/update/:id`| Atualiza um pedido       |
-| `DELETE` | `/order/delete/:id` | Remove um pedido       |
+| `PUT`  | `/order/:orderId`| Atualiza um pedido       |
+| `DELETE` | `/order/:orderId` | Remove um pedido       |
 
 ---
 
