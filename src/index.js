@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from "dotenv";
-import { pool } from "./database/connection.js";
+import { connection } from "./database/connection.js";
 
 dotenv.config();
 const PORT = process.env.APP_PORT || 3000;
@@ -14,7 +14,7 @@ app.use(express.json());
 // ROTA DE TESTE
 app.get("/test-db", async (req, res) => {
   try {
-    const result = await pool.query("SELECT NOW()");
+    const result = await connection.query("SELECT NOW()");
     res.json({
       message: "Conexão bem-sucedida!",
       serverTime: result.rows[0],
