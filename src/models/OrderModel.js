@@ -29,8 +29,8 @@ class OrderModel {
 
   async update(orderId, orderData) {
     await connection.query(
-      "UPDATE orders SET value = $1, creationDate = $2 WHERE orderId = $3",
-      [orderData.value, orderData.creationDate, orderId]
+      "UPDATE orders SET value = $1 WHERE orderId = $2",
+      [orderData.value, orderId]
     );
   }
 
