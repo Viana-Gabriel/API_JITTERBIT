@@ -1,7 +1,6 @@
-import { connection } from "../database/connection";
+import { connection } from "../database/connection.js";
 
 class OrderModel {
-  
   async create(order) {
     const query = `
       INSERT INTO orders (orderId, value, creationDate)
@@ -10,7 +9,7 @@ class OrderModel {
     await connection.query(query, [
       order.orderId,
       order.value,
-      order.creationDate
+      order.creationDate,
     ]);
   }
 
@@ -23,7 +22,8 @@ class OrderModel {
   }
 
   async findAll() {
-    const result = await connection.query("SELECT * FROM orders");
+    const query = `SELECT * FROM orders`;
+    const result = await connection.query(query);
     return result.rows;
   }
 
@@ -39,4 +39,4 @@ class OrderModel {
   }
 }
 
-export default new OrderModel()
+export default new OrderModel();
