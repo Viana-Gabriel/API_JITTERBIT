@@ -154,7 +154,7 @@ Body:
 ---
 
 ### ➤ Atualizar Pedido  
-**PUT** `/order/update/1`
+**PUT** `/order/1`
 
 Body:
 ```json
@@ -171,7 +171,7 @@ Body:
 ---
 
 ### ➤ Deletar Pedido  
-**DELETE** `/order/delete/1`
+**DELETE** `/order/1`
 
 ---
 
